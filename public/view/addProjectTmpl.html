@@ -1,0 +1,17 @@
+<div id="add-project-wrapper">
+  <section id="add-project-header-container">
+    <p class="text-dec">Add Project</p>
+  </section>
+
+  <section id="add-project-main-container">
+    <input class="text-dec input-container" ng-model="project.name" placeholder="Project Name" />
+    <input class="text-dec input-container" ng-model="project.desc" placeholder="Project Description" />
+    <datepicker date-format="MM-dd-yyyy">
+      <input type="text" id="datepicker" class="text-dec input-container" ng-model="project.deadline" placeholder="Project Deadline" />
+    </datepicker>
+    <input class="text-dec input-container" ng-model="project.c_fname" placeholder="Client First Name" />
+    <input class="text-dec input-container" ng-model="project.c_lname" placeholder="Client Last Name" />
+    <input class="text-dec input-container" ng-model="project.c_email" placeholder="Client Email" />
+    <button ng-click="addProject(project)" class="ng-dialog-btn">Create</button>
+  </section>
+</div>

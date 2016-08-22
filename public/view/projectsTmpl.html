@@ -1,0 +1,55 @@
+<div id="projects-main-wrapper">
+
+  <div id="projects-header-wrapper">
+    <section id="projects-title-container">
+      <h1 id="projects-title" class="header-title">Free Flow</h1>
+    </section>
+
+    <section id="projects-nav-container">
+      <ul id="projects-nav-list">
+        <li ng-show="noMessages" class="nav-messages"><i class="fa fa-envelope-o" aria-hidden="true"></i></li>
+        <li id="test" ng-show="!noMessages" class="nav-messages"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+        <li class="text-dec" ng-click="logOut()">Log Out</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="projects-main-content-wrapper">
+    <div ng-show="firstTimeUser" id="projects-first-time-user-wrapper">
+      <section id="projects-first-time-user-main-container">
+        <p class="text-dec" id="first-time-user-info">You currently do not have any projects.<br>Click the plus button at the bottom.</p>
+      </section>
+    </div>
+
+    <section id="project-cards-container" ng-show="!firstTimeUser && !detailedView">
+      <project-card projects-animations class="project-card-animation" ng-repeat="i in projects" data="i"></project-card>
+    </section>
+
+    <div id="project-detailed-wrapper" ng-show="!firstTimeUser && detailedView">
+      <section id="project-detailed-container">
+        <section id="project-detailed-close-container">
+          <i class="fa fa-reply" ng-click="closeDetailedView()"></i>
+        </section>
+        <!-- <p id="close-detailed-buttton" class="text-dec" ng-click="closeDetailedView()">X</p> -->
+        <p id="detailed-project-title" class="text-dec">{{details.name}}</p>
+        <p id="detailed-project-desc" class="text-dec">{{details.description}}</p>
+        <section id="project-detailed-client-container">
+          <h1 id="project-detailed-tasks-header" class="text-dec">Client</h1>
+          <p class="text-dec">{{details.client_first_name}} {{details.client_last_name}}</p>
+          <p class="text-dec">{{details.client_email}}</p>
+        </section>
+
+        <p class="text-dec" id="detailed-project-deadline">Deadline: {{details.deadline}}</p>
+      </section>
+
+      <p ng-show="firstTask" id="no-tasks-info" class="text-dec">You currently do not have any tasks.<br>Click the plus icon at the bottom to get started.</p>
+      <p ng-show="!firstTask" id="detailed-in-progress-title" class="text-dec">In Progress</p>
+      <task-card ng-repeat="i in tasks" data="i"></task-card>
+      <p ng-show="!firstTask" id="detailed-completed-title" class="text-dec">Completed</p>
+    </div>
+  </div>
+
+  <div ng-click="showCreation()" id="projects-footer-container">
+    <p id="add-project-btn" class="text-dec">+</p>
+  </div>
+</div>

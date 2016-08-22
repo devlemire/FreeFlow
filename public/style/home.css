@@ -1,0 +1,138 @@
+#home-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./../img/home-background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+  #home-menu {
+    width: 200px;
+    height: 100%;
+    background: white;
+    position: fixed;
+    right: -200px;
+    z-index: 1;
+    transition: 1s;
+    overflow: auto;
+  }
+
+    #home-menu-links-mobile {
+      margin-top: 20px;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #home-menu-links-mobile li {
+      margin-bottom: 20px;
+      font-size: 20px;
+      display: inline-block;
+    }
+
+    #close-home-menu {
+      color: black;
+      font-size: 30px;
+      top: 10px;
+      right: 10px;
+      margin-top: 10px;
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+  #home-header-wrapper {
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    display: flex;
+  }
+
+    #home-header-container {
+      position: relative;
+      width: 50%;
+    }
+
+      #home-header-title {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 40px;
+        color: black;
+      }
+
+  #home-header-menu-container {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+    #home-menu-nav {
+      width: 30px;
+      height: 30px;
+    }
+
+    #home-menu-links-desktop {
+      display: none;
+    }
+
+    #home-menu-links-desktop li {
+      font-size: 20px;
+      color: black;
+      margin-right: 10px;
+    }
+
+    .desktop-link:hover {
+      cursor: pointer;
+      border-bottom: 1px solid black;
+    }
+
+  #home-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+    #home-title {
+      display: inline-block;
+      font-size: 30px;
+      color: black;
+    }
+
+  #home-scrollDown-wrapper {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+    #home-scrollDown-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+      #home-scrollDown-container h1 {
+        color: black;
+        font-size: 25px;
+      }
+
+      #home-scrollDown-container a {
+        color: black;
+      }
+
+      #home-scrollDown-container a:hover {
+        color: white;
+      }
+
+@media(min-width: 770px) {
+  #home-menu-nav {
+    display: none;
+  }
+
+  #home-menu-links-desktop {
+    display: flex;
+  }
+}

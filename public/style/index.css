@@ -1,0 +1,45 @@
+html {
+  /*background-image: url('./../img/home-background.jpg') !important;
+  background-position: center;
+  background-size: cover;*/
+}
+
+.header-title {
+  font-family: "Lobster", sans-serif;
+}
+
+.text-dec {
+  font-family: "Raleway", sans-serif;
+}
+
+.input-container {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.input-container:focus {
+  outline: none;
+}
+
+.ng-dialog-btn {
+  width: 100px;
+  height: 30px;
+  background: black;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 30px;
+}
+
+.ng-dialog-btn:hover {
+  cursor: pointer;
+  outline: #F5CB5C solid 4px;
+}
+
+.hidden {
+  display: none;
+}

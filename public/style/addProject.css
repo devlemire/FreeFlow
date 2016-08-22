@@ -1,0 +1,24 @@
+#add-project-wrapper {
+  height: 65vh;
+  min-height: 468px;
+}
+
+  #add-project-header-container {
+    width: 100%;
+  }
+
+  #add-project-main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+    #add-project-main-container input {
+      width: 80%;
+    }
+
+    datepicker {
+      text-align: center;
+    }

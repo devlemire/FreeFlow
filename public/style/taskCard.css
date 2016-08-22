@@ -1,0 +1,76 @@
+.task-container {
+    height: auto;
+    min-height: 240px;
+    width: 337px;
+    background: #EEE9E9;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+  .priority-status-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  .task-delete-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .task-done-container {
+    position: absolute;
+    right: 35px;
+    top: 10px;
+  }
+
+  .task-button:hover {
+    cursor: pointer;
+  }
+
+  .task-main-content {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  #task-main-title {
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  #task-main-description-container {
+    width: calc(100% - 10px);
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #task-main-description {
+    font-size: 1em;
+  }
+
+  #task-main-deadline {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  #task-main-priority {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }

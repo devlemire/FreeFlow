@@ -1,0 +1,15 @@
+<section id="project-card-container">
+  <p ng-click="deleteProjectConfirmation(data.name, data.id, data.freelancer)" id="project-card-delete-btn" class="text-dec">X</p>
+  <section id="project-card-header">
+    <p id="project-card-title" class="text-dec">{{data.name}}</p>
+    <p id="project-card-desc" class="text-dec">{{data.description}}</p>
+  </section>
+
+  <section id="project-card-main">
+    <p ng-click="detailedView(data)" class="text-dec" id="project-card-add-task-btn">+</p>
+  </section>
+
+  <section id="project-card-footer">
+    <p id="project-card-deadline" class="text-dec">Deadline: {{data.deadline}}</p>
+  </section>
+</section>

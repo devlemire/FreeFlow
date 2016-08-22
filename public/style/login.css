@@ -1,0 +1,50 @@
+#login-container {
+  min-height: 215px;
+}
+
+#login-content-container {
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+  #login-content-container input {
+    width: 70%;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    font-size: 20px;
+  }
+
+  #login-content-container input:focus {
+    outline: none;
+  }
+
+  #login-local-button {
+    margin-top: 0px;
+  }
+
+  #login-or-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  #login-google-button {
+    width: 65%;
+    border-radius: 5px;
+  }
+
+  #login-facebook-button {
+    margin-top: 10px;
+    width: 65%;
+    border-radius: 5px;
+  }
+
+  .login-button:hover {
+    cursor: pointer;
+    outline: #F5CB5C solid 4px;
+  }

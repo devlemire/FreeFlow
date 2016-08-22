@@ -1,0 +1,40 @@
+#register-container {
+  height: 50vh;
+  min-height: 650px;
+  width: 100%;
+}
+
+  #register-header-desc {
+    font-size: 15px;
+  }
+
+  #register-content-container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #register-content-container button:focus {
+    outline: none;
+  }
+
+    #register-type-container {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    #register-type-container p {
+      margin-right: 10px;
+    }
+
+  #register-or-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,14 @@
+#confirmation-main-wrapper {
+  margin-top: 30px;
+  width: 100%;
+}
+
+  #confirmation-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #confirmation-button-container button:focus {
+    outline: none;
+  }

@@ -1,0 +1,20 @@
+<div id="add-task-container">
+  <p class="text-dec">{{details.name}}</p>
+
+  <section id="task-content-container">
+    <input id="task-title" ng-model="task.title" class="text-dec input-container" placeholder="Task Title" />
+    <input ng-model="task.description" class="text-dec input-container" placeholder="Task Description" />
+    <datepicker date-format="MM-dd-yyyy">
+      <input type="text" id="task-datepicker" class="text-dec input-container" ng-model="task.deadline" placeholder="Task Deadline" />
+    </datepicker>
+  </section>
+
+    <p class="text-dec">Priority</p>
+    <input ng-model="task.priority" name="p-level" value="Low" class="priority text-dec" type="radio">Low</input>
+    <input ng-model="task.priority" name="p-level" value="Medium" class="priority text-dec" type="radio">Medium</input>
+    <input ng-model="task.priority" name="p-level" value="High" class="priority text-dec" type="radio">High</input>
+
+  <section id="task-priority-container">
+      <button ng-click="addTask(task)" id="create-task-button" class="text-dec ng-dialog-btn">Create</button>
+  </section>
+</div>

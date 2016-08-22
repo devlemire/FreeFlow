@@ -1,0 +1,45 @@
+#add-task-container {
+  height: 50vh;
+  min-height: 207px;
+}
+
+#task-content-container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 197px;
+}
+
+  #task-title {
+    margin-top: 0px;
+  }
+
+  #task-content-container input {
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    font-size: 20px;
+  }
+
+  #task-content-container input:focus {
+    outline: none;
+  }
+
+  #task-priority-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .priority {
+    display: inline-block;
+  }
+
+    #create-task-button {
+      text-align: center;
+    }

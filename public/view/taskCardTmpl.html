@@ -1,0 +1,18 @@
+<section class="task-container">
+  <div priority-status data="data.priority" class="priority-status-circle"></div>
+  <section class='task-done-container'>
+    <i ng-click="addCompleted(data)" class="fa fa-check task-button" aria-hidden="true"></i>
+  </section>
+  <section class="task-delete-container task-button">
+    <i ng-click="deleteTask(data)" class="fa fa-trash task-button" aria-hidden="true"></i>
+  </section>
+
+  <section class="task-main-content">
+    <p id="task-main-title" class="text-dec task-title">{{data.title}}</p>
+    <div id="task-main-description-container">
+      <p id="task-main-description" class="text-dec">{{data.description}}</p>
+    </div>
+    <p id="task-main-deadline" class="text-dec">Deadline: {{data.deadline}}</p>
+    <!-- <p id="task-main-priority" class="text-dec">Priority: {{data.priority}}</p> -->
+  </section>
+</section>
