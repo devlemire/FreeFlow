@@ -37,10 +37,15 @@ app.delete('/api/project/:id', projectsCtrl.deleteProject);
 
 
 //Task endpoints
-app.get('/api/task/:id', projectsCtrl.getTasks);
+app.get('/api/task/:projectId', projectsCtrl.getTasks);
 app.post('/api/task', projectsCtrl.createTask);
 app.delete('/api/tasks/:projectId', projectsCtrl.deleteAllTasks);
 app.delete('/api/task/:taskId/:projectId', projectsCtrl.deleteTask);
+
+//Completed tasks endpoints
+app.get('/api/completed/:projectId', projectsCtrl.getCompletedTasks);
+app.post('/api/completed', projectsCtrl.addCompletedTask);
+app.delete('/api/completed/:taskId/:projectId', projectsCtrl.deleteCompletedTask);
 
 //Sub-Task endpoints
 

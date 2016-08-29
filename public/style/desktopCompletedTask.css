@@ -1,0 +1,11 @@
+#desktop-completed-task-list-container {
+  margin-top: 10px;
+  width: 470px;
+  height: 50px;
+  background: #E9E9EB;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

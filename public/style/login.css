@@ -3,7 +3,8 @@
 }
 
 #login-content-container {
-  height: 370px;
+  margin-top: 25px;
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,13 @@
 
   #login-local-button {
     margin-top: 0px;
+    width: 100px;
+    height: 30px;
+    background: black;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
   }
 
   #login-or-text {

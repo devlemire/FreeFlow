@@ -1,4 +1,4 @@
-<section class="task-container">
+<section id="desktop-task-list-container">
   <div priority-status data="data.priority" class="priority-status-circle"></div>
   <section class='task-done-container'>
     <i ng-click="addCompleted(data)" class="fa fa-check task-button" aria-hidden="true"></i>
@@ -7,14 +7,14 @@
     <i ng-click="deleteTask(data)" class="fa fa-trash task-button" aria-hidden="true"></i>
   </section>
 
-  <section class="task-main-content">
-    <div id="task-main-title-container">
-      <p id="task-main-title" class="text-dec task-title">{{data.title}}</p>
+  <section class="desktop-task-main-content">
+    <div id="desktop-task-main-title-container">
+      <p id="desktop-task-main-title" class="text-dec task-title">{{data.title}}</p>
     </div>
-    <div id="task-main-description-container">
-      <p id="task-main-description" class="text-dec">{{data.description}}</p>
+    <div id="desktop-task-main-description-container">
+      <p id="desktop-task-main-description" class="text-dec">{{data.description}}</p>
     </div>
-    <p id="task-main-deadline" class="text-dec">Deadline: {{data.deadline}}</p>
+    <p id="desktop-task-main-deadline" class="text-dec">Deadline: {{data.deadline}}</p>
     <!-- <p id="task-main-priority" class="text-dec">Priority: {{data.priority}}</p> -->
   </section>
 </section>

@@ -1,7 +1,7 @@
 #project-card-container {
   float: left;
   margin-top: 20px;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   height: 200px;
   width: 335px;
   margin-top: 20px;
@@ -27,6 +27,7 @@
       text-align: center;
       font-size: 25px;
       font-weight: bold;
+      margin-top: 20px;
     }
 
     #project-card-desc {
@@ -82,3 +83,9 @@
     #project-client-info-btn:hover {
       cursor: pointer;
     }
+
+@media(max-width: 320px) {
+  #project-card-container {
+    width: 290px;
+  }
+}

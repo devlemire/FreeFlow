@@ -29,6 +29,7 @@ module.exports = {
         res.status(200).send({error: 'userNotFound'});
       }
     });
+
   },
   googleAuth: function(req, res) {
     db.queries.google.verifyUser([req.body.sub], function(err, r) {

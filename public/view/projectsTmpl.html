@@ -1,31 +1,107 @@
 <div id="projects-main-wrapper">
 
   <div id="projects-header-wrapper">
-    <section id="projects-title-container">
-      <h1 id="projects-title" class="header-title">Free Flow</h1>
-    </section>
-
-    <section id="projects-nav-container">
-      <ul id="projects-nav-list">
-        <li ng-show="noMessages" class="nav-messages"><i class="fa fa-envelope-o" aria-hidden="true"></i></li>
-        <li id="test" ng-show="!noMessages" class="nav-messages"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-        <li class="text-dec" ng-click="logOut()">Log Out</li>
-      </ul>
-    </section>
+    <h1 id="projects-title" class="header-title" ui-sref="projects">Free Flow</h1>
+    <!-- <div id="project-desktop-search-icon">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    <input class="text-dec" id="project-desktop-search-bar" type="text" placeholder="Find.." /> -->
+    <p id="desktop-new-user-info" ng-show="firstTask" class="text-dec">Click me to get started!  <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+    <button ng-show="projectPage" ng-click="showCreation()" type="text" id="project-desktop-create-button">Create Project..</button>
+    <button ng-show="!projectPage" ng-click="showCreation()" type="text" id="project-desktop-create-button">Create Task..</button>
+    <ul id="projects-nav-list">
+      <!-- <li ng-show="noMessages" class="nav-messages"><i class="fa fa-envelope-o" aria-hidden="true"></i></li>
+      <li id="test" ng-show="!noMessages" class="nav-messages"><i class="fa fa-envelope" aria-hidden="true"></i></li> -->
+      <li class="text-dec" ng-click="logOut()">Log Out</li>
+    </ul>
   </div>
 
   <div id="projects-main-content-wrapper">
     <div ng-show="firstTimeUser" id="projects-first-time-user-wrapper">
       <section id="projects-first-time-user-main-container">
+        <p class="text-dec" id="desktop-first-time-user-info">You currently do not have any projects.<br>Click the Create Project button at the top to get started.</p>
         <p class="text-dec" id="first-time-user-info">You currently do not have any projects.<br>Click the plus button at the bottom.</p>
       </section>
     </div>
 
-    <section id="project-cards-container" ng-show="!firstTimeUser && !detailedView">
+    <!-- DESKTOP VERISON - DISPLAY PROJECTS -->
+    <section id="project-desktop-container" class="toggle" ng-show="!firstTimeUser && !detailedView">
+      <section id="project-desktop-main-container">
+
+        <section class="project-desktop-category-container">
+          <section class="project-desktop-header-container">
+            <p id="project-desktop-projects-container-header" class="text-dec">My Projects</p>
+          </section>
+
+          <section class="project-desktop-main-container">
+            <desktop-project ng-repeat="i in projects" data="i"></desktop-project>
+          </section>
+        </section>
+
+        <!-- <section class="project-desktop-category-container">
+          <section class="project-desktop-header-container">
+            <p id="project-desktop-projects-container-header" class="text-dec">Completed</p>
+          </section>
+
+          <section class="project-desktop-main-container">
+            <desktop-project ng-repeat="i in projects" data="i"></desktop-project>
+          </section>
+        </section> -->
+      </section>
+    </section>
+    <!-- DESKTOP VERISON - DISPLAY PROJECTS -->
+
+    <!-- MOBILE VERISON - DISPLAY PROJECTS -->
+    <section id="project-cards-container" class="toggle" ng-show="!firstTimeUser && !detailedView">
       <project-card projects-animations class="project-card-animation" ng-repeat="i in projects" data="i"></project-card>
     </section>
+    <!-- MOBILE VERISON - DISPLAY PROJECTS -->
 
-    <div id="project-detailed-wrapper" ng-show="!firstTimeUser && detailedView">
+    <!-- MOBILE VERSION - DISPLAY TASKS -->
+    <div id="project-detailed-wrapper" class="toggle" ng-show="!firstTimeUser && detailedView">
+
+      <!-- DESKTOP VERISON - DISPLAY TASKS -->
+      <div id="desktop-interface">
+        <section id="project-detailed-desktop-container">
+          <section id="project-detailed-desktop-header-container">
+            <section id="project-detailed-desktop-close-container">
+              <i class="fa fa-reply" ng-click="closeDetailedView()"></i>
+            </section>
+            <p id="project-desktop-projects-container-header" class="text-dec">{{details.name}}</p>
+          </section>
+
+          <section id="project-detailed-desktop-main-container">
+            <p id="project-detailed-desktop-description-text" class="text-dec orange-header">Description</p>
+            <p class="text-dec" id="project-detailed-desktop-description">{{details.description}}</p>
+            <p class="text-dec orange-header">Client</p>
+            <p class="text-dec project-detailed-desktop-text">{{details.client_first_name}} {{details.client_last_name}}</p>
+            <p class="text-dec project-detailed-desktop-text">{{details.client_email}}</p>
+            <p class="text-dec orange-header">Deadline</p>
+            <p class="text-dec project-detailed-desktop-text">{{details.deadline}}</p>
+          </section>
+        </section>
+
+        <section id="desktop-tasks-container">
+          <section id="desktop-tasks-header-container">
+            <p class="text-dec">In Progress</p>
+          </section>
+          <section id="desktop-tasks-main-container">
+            <desktop-task ng-repeat="i in tasks" data="i"></desktop-task>
+          </section>
+        </section>
+
+        <section id="desktop-completed-tasks-container">
+          <section id="desktop-tasks-header-container">
+            <p class="text-dec">Completed</p>
+          </section>
+          <section id="desktop-tasks-completed-main-container">
+            <desktop-completed-task ng-repeat="j in completed" data="j"></desktop-completed-task>
+          </section>
+        </section>
+      </div>
+      <!-- DESKTOP VERSION - DISPLAY TASKS -->
+
+      <!-- MOBILE VERSION - DISPLAY TASKS -->
       <section id="project-detailed-container">
         <section id="project-detailed-close-container">
           <i class="fa fa-reply" ng-click="closeDetailedView()"></i>
@@ -44,10 +120,16 @@
 
       <p ng-show="firstTask" id="no-tasks-info" class="text-dec">You currently do not have any tasks.<br>Click the plus icon at the bottom to get started.</p>
       <p ng-show="!firstTask" id="detailed-in-progress-title" class="text-dec">In Progress</p>
-      <task-card ng-repeat="i in tasks" data="i"></task-card>
-      <p ng-show="!firstTask" id="detailed-completed-title" class="text-dec">Completed</p>
+      <section id="detailed-tasks-container">
+        <task-card ng-repeat="i in tasks" data="i"></task-card>
+      </section>
+      <p id="detailed-completed-title" class="text-dec">Completed</p>
+      <section id="detailed-completed-tasks-container">
+        <completed-card ng-repeat="j in completed" data="j"></completed-card>
+      </section>
     </div>
   </div>
+  <!--MOBILE VERSION - DISPLAY TASKS -->
 
   <div ng-click="showCreation()" id="projects-footer-container">
     <p id="add-project-btn" class="text-dec">+</p>

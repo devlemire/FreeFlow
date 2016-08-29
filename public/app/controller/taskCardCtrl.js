@@ -18,7 +18,7 @@ angular
     };
 
     $scope.addCompleted = function(task) {
-      console.log("ADD TO COMPLETED", task);
+      // console.log("ADD TO COMPLETED", task);
       $rootScope.$broadcast('addCompleted', task);
     };
 

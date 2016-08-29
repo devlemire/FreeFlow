@@ -4,7 +4,7 @@
   <section id="login-content-container">
     <input class="text-dec" ng-model="user.username" placeholder="Username" />
     <input class="text-dec" ng-model="user.password" type='password' placeholder="Password" />
-    <button class="text-dec ng-dialog-btn" id="login-local-button" ng-click="localAuth(user)">Sign In</button>
+    <button class="text-dec" id="login-local-button" ng-click="localAuth(user)">Sign In</button>
     <p id="login-or-text" class="text-dec">OR</p>
     <img ng-click="authenticate('google')" class="login-button" id="login-google-button" src="./img/googleLogin.jpg" />
     <!-- <img class="login-button" id="login-facebook-button" src="./img/facebookLogin.jpg" /> -->

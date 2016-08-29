@@ -1,9 +1,3 @@
-html {
-  /*background-image: url('./../img/home-background.jpg') !important;
-  background-position: center;
-  background-size: cover;*/
-}
-
 .header-title {
   font-family: "Lobster", sans-serif;
 }
@@ -27,7 +21,7 @@ html {
 .ng-dialog-btn {
   width: 100px;
   height: 30px;
-  background: black;
+  background: #FD8401;
   font-size: 15px;
   border-radius: 5px;
   border: none;
@@ -37,9 +31,60 @@ html {
 
 .ng-dialog-btn:hover {
   cursor: pointer;
-  outline: #F5CB5C solid 4px;
 }
 
 .hidden {
   display: none;
+}
+
+.orange-header {
+  font-size: 20px;
+  color: #FD8401;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.project-detailed-desktop-text {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.fade.ng-enter {
+  position: relative;
+  height: auto;
+  -webkit-transition: bottom 800ms;
+  transition: bottom 800ms;
+  bottom: 100vh;
+}
+
+.fade.ng-enter-active {
+    bottom: 0;
+}
+
+.fade.ng-leave {
+    bottom: -100vh;
+}
+
+.fade.ng-leave-active {
+    opacity: 0 !important;
+}
+
+.toggle.ng-hide-add {
+    -webkit-transition-duration: 300ms;
+    opacity: 1;
+}
+
+.toggle.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+}
+
+.toggle.ng-hide-remove {
+    -webkit-transition-duration: 300ms;
+    /*display: block !important;*/
+    opacity: 0;
+}
+
+.toggle.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
 }

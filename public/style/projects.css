@@ -4,36 +4,44 @@
 }
 
   #projects-header-wrapper {
+
     width: 100%;
-    height: 60px;
+    height: 10vh;
     display: flex;
     background: #EEE9E9;
     border: 1px solid black;
+    align-items: center;
   }
 
-    #projects-title-container {
+    /*#projects-title-container {
       width: 50%;
       height: 100%;
       display: flex;
       align-items: center;
-    }
+    }*/
 
       #projects-title {
         font-size: 30px;
-        margin-left: 10px
+        margin-left: 10px;
+        margin-right: 30px;
       }
 
-    #projects-nav-container {
+      #projects-title:hover {
+        cursor: pointer;
+      }
+
+    /*#projects-nav-container {
       width: 50%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
+    }*/
 
       #projects-nav-list {
         position: absolute;
         right: 20px;
+        height: 14px;
       }
 
       #projects-nav-list li {
@@ -57,10 +65,10 @@
     border-left: 1px solid black;
     border-right: 1px solid black;
     width: 100%;
-    min-height: 547px;
-    height: 81.5vh;
+    min-height: 454px;
+    height: 80vh;
     overflow: auto;
-    background: #AAB9CF;
+    background: #FDA647;
     /*background-image: url('../img/desk.jpg');
     background-size: cover;
     background-position: center;*/
@@ -69,9 +77,9 @@
     #project-cards-container {
       width: 100%;
       height: 100%;
-      /*display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;*/
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     #projects-first-time-user-wrapper {
@@ -96,7 +104,7 @@
 
   #project-detailed-wrapper {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,20 +174,20 @@
 
     #detailed-completed-title {
       margin-top: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       font-size: 30px;
     }
 
   #no-tasks-info {
     margin-top: 30px;
     color: white;
-    text-shadow: black 2px 2px;
   }
 
 #projects-footer-container {
   border: 1px solid black;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,3 +201,338 @@
     #add-project-btn {
       font-size: 50px;
     }
+
+/*ELEMENTS TO HIDE ON MOBILE*/
+#project-desktop-container {
+  display: none;
+}
+
+#project-desktop-search-icon {
+  display: none;
+}
+
+#project-desktop-search-bar {
+  display: none;
+}
+
+#project-desktop-create-button {
+  display: none;
+}
+
+#project-detailed-desktop-container {
+  display: none;
+}
+
+#desktop-tasks-container {
+  display: none;
+}
+
+#desktop-interface {
+  display: none;
+}
+
+#desktop-new-user-info {
+  display: none;
+}
+
+#desktop-first-time-user-info {
+  display: none;
+}
+
+/*TRANSFORM SITE TO DESKTOP VERSION*/
+@media(min-width: 1025px) {
+
+  #first-time-user-info {
+    display: none;
+  }
+
+  #desktop-first-time-user-info {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    text-shadow: black 2px 2px;
+  }
+
+  #desktop-new-user-info {
+    display: inline-block;
+    position: absolute;
+    right: 230px;
+  }
+
+  #project-desktop-search-icon {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  #project-desktop-search-bar {
+    display: inline-block;
+    width: 200px;
+    height: 18px;
+    font-size: 18px;
+  }
+
+  #project-desktop-create-button {
+    display: inline-block;
+    width: 130px;
+    height: 24px;
+    background: #FD8401;
+    margin-left: 10px;
+    color: #FAFAFA;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+    right: 90px;
+    border-radius: 5px;
+  }
+
+  #project-create-bar:hover {
+    cursor: pointer;
+  }
+
+  #project-cards-container {
+    display: none !important;
+  }
+
+  #project-desktop-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #projects-header-wrapper {
+    border: none;
+    width: 100%;
+    height: 6vh;
+    min-height: 57px;
+    display: flex;
+    background: #FFFFFF;
+  }
+
+  #projects-main-content-wrapper {
+    border: none;
+    width: 100%;
+    min-height: 94vh;
+    height: auto;
+    overflow: auto;
+    background: #FD8401;
+  }
+
+    #project-cards-container {
+      width: 100%;
+      height: auto;
+      min-height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+  #project-desktop-main-container {
+    display: flex;
+    width: calc(100% - 20px);
+    min-height: 461px;
+    height: 94vh;
+    margin-left: 10px;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .project-desktop-category-container {
+      width: 524px;
+      height: 90%;
+      min-height: 385px;
+      border-radius: 5px;
+      background: #FAFAFA;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 10px 17px 0px rgba(0,0,0,0.75);
+    }
+
+      .project-desktop-header-container {
+        background: #E9E9EB;
+        font-size: 24px;
+        text-align: center;
+        height: 5%;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .project-desktop-main-container {
+        height: 95%;
+        width: 100%;
+        overflow: auto;
+      }
+
+  #project-detailed-wrapper {
+    height: 94vh;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #project-detailed-desktop-wrapper {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+
+  #project-detailed-wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  #desktop-interface {
+    height: auto;
+    width: auto;
+    display: flex;
+    position: relative;
+  }
+
+    #project-detailed-desktop-container {
+      width: 524px;
+      height: 34vh;
+      border-radius: 5px;
+      background: #FAFAFA;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 10px 17px 0px rgba(0,0,0,0.75);
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+      #project-detailed-desktop-header-container {
+        background: #E9E9EB;
+        font-size: 24px;
+        text-align: center;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+        #project-detailed-desktop-close-container {
+          position: absolute;
+          right: 20px;
+          font-size: 18px;
+        }
+
+        #project-detailed-desktop-close-container:hover {
+          cursor: pointer;
+        }
+
+      #project-detailed-desktop-main-container {
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 77%;
+        min-height: 236px;
+        width: calc(100% - 20px);
+        background: #E9E9EB;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        overflow: auto;
+      }
+
+        #project-detailed-desktop-description {
+          margin-left: 10px;
+          margin-top: 5px;
+          min-height: 65px;
+          height: 30%;
+        }
+
+    #project-detailed-container {
+      display: none;
+    }
+
+
+
+    #desktop-tasks-container {
+      margin-top: 10px;
+      margin-left: 20px;
+      display: flex;
+      width: 525px;
+      height: 91vh;
+      background: #FAFAFA;
+      border-radius: 5px;
+      box-shadow: 0px 10px 17px 0px rgba(0,0,0,0.75);
+      flex-direction: column;
+    }
+
+      #desktop-tasks-main-container {
+        width: 525px;
+        height: 94%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        padding-bottom: 10px;
+      }
+
+    #desktop-completed-tasks-container {
+      display: flex;
+      width: 525px;
+      height: 55vh;
+      background: #FAFAFA;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0px;
+      left: 10px;
+      box-shadow: 0px 10px 17px 0px rgba(0,0,0,0.75);
+      flex-direction: column;
+    }
+
+      #desktop-tasks-completed-main-container {
+        width: 525px;
+        height: 94%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        padding-bottom: 10px;
+      }
+
+      #desktop-tasks-header-container {
+        width: 525px;
+        height: 50px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #E9E9EB;
+      }
+
+  #project-detailed-container {
+    display: none !important;
+  }
+
+  #no-tasks-info {
+    display: none !important;
+  }
+
+  #no-tasks-info {
+    display: none !important;
+  }
+
+  #detailed-in-progress-title {
+    display: none !important;
+  }
+
+  #detailed-completed-title {
+    display: none !important;
+  }
+
+  #detailed-tasks-container {
+    display: none !important;
+  }
+
+  #detailed-completed-tasks-container {
+    display: none !important;
+  }
+
+  #projects-footer-container {
+    display: none;
+  }
+}

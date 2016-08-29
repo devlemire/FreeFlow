@@ -36,11 +36,15 @@
 		<link rel="stylesheet" href="./style/addTask.css" />
 		<link rel="stylesheet" href="./style/taskCard.css" />
 		<link rel="stylesheet" href="./style/accountType.css" />
+		<link rel="stylesheet" href="./style/completedCard.css" />
+		<link rel="stylesheet" href="./style/desktopProject.css" />
+		<link rel="stylesheet" href="./style/desktopTask.css" />
+		<link rel="stylesheet" href="./style/desktopCompletedTask.css" />
 	</head>
 
 	<body>
 
-    <ui-view></ui-view>
+		<div class="fade" ui-view></div>
 
 		<!--FRAMEWORK-->
 		<script src="./script/framework/angular.js"></script>
@@ -51,6 +55,7 @@
 		<script src="./bower_components/ng-dialog/js/ngDialog.min.js"></script>
 		<script src="./bower_components/angularjs-datepicker/src/js/angular-datepicker.js"></script>
 		<script src="./bower_components/satellizer/dist/satellizer.js"></script>
+		<script src="./bower_components/angular-animate/angular-animate.js"></script>
 		<!--ANGULAR APP-->
 		<script src="./app/app.js"></script>
 		<!--ANGULAR CONTROLLER-->
@@ -60,6 +65,7 @@
 		<script src="./app/controller/projectsCtrl.js"></script>
 		<script src="./app/controller/projectCardCtrl.js"></script>
 		<script src="./app/controller/taskCardCtrl.js"></script>
+		<script src="./app/controller/completedCtrl.js"></script>
 		<!--ANGULAR SERVICE-->
 		<script src="./app/service/registerSrvc.js"></script>
 		<script src="./app/service/loginSrvc.js"></script>
@@ -74,5 +80,9 @@
 		<script src="./app/directive/container/taskCard.js"></script>
 		<script src="./app/directive/attribute/priority.js"></script>
 		<script src="./app/directive/attribute/priorityStatus.js"></script>
+		<script src="./app/directive/container/completedCard.js"></script>
+		<script src="./app/directive/container/desktopProject.js"></script>
+		<script src="./app/directive/container/desktopTask.js"></script>
+		<script src="./app/directive/container/desktopCompletedTask.js"></script>
 	</body>
 </html>

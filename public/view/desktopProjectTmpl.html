@@ -1,0 +1,11 @@
+<section class="project-desktop-item">
+  <p id="project-desktop-title" class="text-dec">{{data.name}}</p>
+  <p id="project-desktop-description" class="text-dec">{{data.description}}</p>
+
+  <div id="project-desktop-delete-button" class="text-dec">
+    <i ng-click="deleteProjectConfirmation(data.name, data.id, data.freelancer)" class="fa fa-trash task-button" aria-hidden="true"></i>
+  </div>
+
+  <p id="project-desktop-deadline" class="text-dec">Deadline: {{data.deadline}}</p>
+  <p ng-click="detailedView(data)" id="project-task-view-button" class="text-dec">Manage tasks..</p>
+</section>

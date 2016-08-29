@@ -28,7 +28,7 @@ module.exports = {
     });
   },
   getTasks: function(req, res) {
-    db.queries.tasks.getAll([req.params.id], function(err, r) {
+    db.queries.tasks.getAll([req.params.projectId], function(err, r) {
       res.json(r);
     });
   },
@@ -53,6 +53,42 @@ module.exports = {
     db.queries.tasks.deleteAll([req.params.projectId], function(err, r) {
       db.queries.projects.delete([req.params.projectId], function(err, r) {
         res.status(200).send();
+      });
+    });
+  },
+  getCompletedTasks: function(req, res) {
+    console.log('INCOMING GET COMPLETED TASKS', req.params.projectId);
+    db.queries.completed.getAll([req.params.projectId], function(err, r) {
+      console.log('TASKS FOUND:', r);
+      res.json(r);
+    });
+  },
+  addCompletedTask: function(req,res) {
+    var completedTasks;
+    var tasks;
+    console.log('INCOMING ADD COMPLETED TASK - PROJECT', req.body.project_id);
+    db.queries.completed.add([req.body.project_id, req.body.title, req.body.task_id], function(err, r) {
+      //remove from task table after adding to completed task table
+      db.queries.completed.deleteFromTasks(req.body.task_id, function(err, r) {
+        db.queries.completed.getAll([req.body.project_id], function(err, r) {
+          console.log('COMPLETED TASKS', r);
+          completedTasks = r;
+          db.queries.tasks.getAll([req.body.project_id], function(err, r) {
+            console.log('TASKS', r);
+            tasks = r;
+            res.json({completed: completedTasks, tasks: tasks});
+          });
+        });
+      });
+    });
+  },
+  deleteCompletedTask: function(req, res) {
+    console.log('INCOMING DELETE COMPLETED TASK - TASK', req.params.taskId, 'PROJECT -', req.params.projectId);
+    console.log('REQ BODY', req.body);
+    db.queries.completed.delete([req.params.taskId], function(err, r) {
+      db.queries.completed.getAll([req.params.projectId], function(err, r) {
+        console.log('UPDATED COMPLETED TASKS LIST', r);
+        res.json(r);
       });
     });
   }

@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router', 'ngDialog','720kb.datepicker', 'satellizer'])
+  .module('app', ['ui.router', 'ngDialog','720kb.datepicker', 'satellizer', 'ngAnimate'])
   .config(function($stateProvider, $urlRouterProvider, $authProvider, $locationProvider) {
 
     $locationProvider.html5Mode(true);

@@ -1,6 +1,6 @@
 #register-container {
   height: 50vh;
-  min-height: 650px;
+  min-height: 550px;
   width: 100%;
 }
 
@@ -15,6 +15,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  #register-button {
+    background: black;
   }
 
   #register-content-container button:focus {
