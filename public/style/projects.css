@@ -367,7 +367,7 @@
       }
 
   #project-detailed-wrapper {
-    height: 94vh;
+    height: 100vh;
     flex-direction: row;
     justify-content: center;
   }
@@ -385,7 +385,7 @@
   }
 
   #desktop-interface {
-    height: auto;
+    height: calc(100% - 20px);
     width: auto;
     display: flex;
     position: relative;
@@ -393,7 +393,7 @@
 
     #project-detailed-desktop-container {
       width: 524px;
-      height: 34vh;
+      height: 39vh;
       border-radius: 5px;
       background: #FAFAFA;
       display: flex;
@@ -455,7 +455,7 @@
       margin-left: 20px;
       display: flex;
       width: 525px;
-      height: 91vh;
+      height: 96vh;
       background: #FAFAFA;
       border-radius: 5px;
       box-shadow: 0px 10px 17px 0px rgba(0,0,0,0.75);
@@ -464,7 +464,7 @@
 
       #desktop-tasks-main-container {
         width: 525px;
-        height: 94%;
+        height: 93%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -487,7 +487,7 @@
 
       #desktop-tasks-completed-main-container {
         width: 525px;
-        height: 94%;
+        height: 88%;
         display: flex;
         flex-direction: column;
         align-items: center;
