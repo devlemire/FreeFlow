@@ -4,7 +4,7 @@ var request = require('request');
 var moment = require('moment');
 var jwt = require('jwt-simple');
 var passwordHash = require('password-hash');
-var config = require('../config/config.js');
+var config = require('../config.js');
 
 function createJWT(user) {
   var payload = {
@@ -32,6 +32,7 @@ module.exports = {
 
   },
   googleAuth: function(req, res) {
+    console.log(req.body, req.params);
     db.queries.google.verifyUser([req.body.sub], function(err, r) {
       if(r.length === 0) {
         res.status(200).send({error: 'notRegistered'});

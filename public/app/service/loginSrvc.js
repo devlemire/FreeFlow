@@ -1,11 +1,13 @@
 angular
   .module('app')
   .service('loginSrvc', function($http) {
+   
+    var connectionString = 'http://taskflow.tech:80/';
 
     this.localAuth = function(user) {
       return $http({
         method: 'POST',
-        url: 'http://localhost:3000/auth/local',
+        url: connectionString + 'auth/local',
         data: user
       });
     };
@@ -13,7 +15,7 @@ angular
     this.googleAuth = function(user) {
       return $http({
         method: 'POST',
-        url: 'http://localhost:3000/login/google',
+        url: connectionString + '/login/google',
         data: user
       });
     };

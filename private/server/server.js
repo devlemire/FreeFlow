@@ -1,12 +1,12 @@
+var config = require('./config.js');
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var massive = require('massive');
-var connectionString = "postgress://jameslemire@localhost/freeflow";
-var massiveInstance = massive.connectSync({connectionString : connectionString});
+var massiveInstance = massive.connectSync({connectionString : config.connectionString});
 var app = module.exports = express();
 app.set('db', massiveInstance);
-var config = require('./config/config.js');
+
 var loginCtrl = require('./controller/loginCtrl.js');
 var registerCtrl = require('./controller/registerCtrl.js');
 var projectsCtrl = require('./controller/projectsCtrl.js');
@@ -14,6 +14,7 @@ var thirdPartyCtrl = require('./controller/thirdPartyCtrl.js');
 
 app.use(express.static('../../public'));
 app.use(bodyParser.json());
+app.use(cors(config.corsOptions));
 
 //Third Party Authorization
 app.post('/auth/google', thirdPartyCtrl.googleAuth);

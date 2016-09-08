@@ -2,19 +2,20 @@ angular
   .module('app')
   .service('projectsSrvc', function($http) {
 
+    var connectionString = 'http://taskflow.tech:80/';
     this.projects = [];
 
     this.getProjects = function(id) {
       return $http({
         method: 'GET',
-        url: 'http://localhost:3000/api/projects/' + id,
+        url: connectionString + 'api/projects/' + id,
       });
     };
 
     this.addProject = function(data) {
       return $http({
         method: 'POST',
-        url: 'http://localhost:3000/api/projects',
+        url: connectionString + 'api/projects',
         data: data
       });
     };
@@ -22,14 +23,14 @@ angular
     this.deleteProject = function(id) {
         return $http({
           method: 'DELETE',
-          url: 'http://localhost:3000/api/project/' + id
+          url: connectionString + 'api/project/' + id
         });
     };
 
     this.addTask = function(data) {
       return $http({
         method: 'POST',
-        url: 'http://localhost:3000/api/task',
+        url: connectionString + 'api/task',
         data: data
       });
     };
@@ -37,28 +38,28 @@ angular
     this.getTasks = function(id) {
       return $http({
         method: 'GET',
-        url: 'http://localhost:3000/api/task/' + id
+        url: connectionString + 'api/task/' + id
       });
     };
 
     this.deleteAllTasks = function(id) {
       return $http({
         method: 'DELETE',
-        url: 'http://localhost:3000/api/tasks/' + id
+        url: connectionString + 'api/tasks/' + id
       });
     };
 
     this.getCompletedTasks = function(project_id) {
       return $http({
         method: 'GET',
-        url: 'http://localhost:3000/api/completed/' + project_id
+        url: connectionString + 'api/completed/' + project_id
       });
     };
 
     this.addCompleted = function(task) {
       return $http({
         method: 'POST',
-        url: 'http://localhost:3000/api/completed',
+        url: connectionString + 'api/completed',
         data: task
       });
     };
@@ -66,7 +67,7 @@ angular
     this.deleteCompletedTask = function(task) {
       return $http({
         method: 'DELETE',
-        url: 'http://localhost:3000/api/completed/' + task.id + '/' + task.project_id,
+        url: connectionString + 'api/completed/' + task.id + '/' + task.project_id,
       });
     };
   });

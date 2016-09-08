@@ -1,6 +1,6 @@
 var app = require('../server.js');
 var passwordHash = require('password-hash');
-var config = require('../config/config.js');
+var config = require('../config.js');
 var request = require('request');
 var moment = require('moment');
 var jwt = require('jwt-simple');

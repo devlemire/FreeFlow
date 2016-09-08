@@ -19,7 +19,7 @@ angular
         });
 
         $homeTitle.typed({
-            strings: ["Welcome to Free Flow ^1000", "Manage multiple projects ^1000", "Keep track of deadlines ^1000", "Stay in touch with clients ^1000"],
+            strings: ["Welcome to Task Flow ^1000", "Manage multiple projects ^1000", "Keep track of deadlines ^1000", "Stay in touch with clients ^1000"],
             typeSpeed: 0,
             loop: true
         });

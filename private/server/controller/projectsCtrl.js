@@ -41,7 +41,7 @@ module.exports = {
     });
   },
   deleteTask: function(req, res) {
-    console.log("INCOMING TASK DELETION", req.params.taskId);
+    console.log("INCOMING TASK DELETION", req.params);
     db.queries.tasks.delete([req.params.taskId], function(err, r) {
       db.queries.tasks.getAll([req.params.projectId], function(err, r) {
         res.json(r);

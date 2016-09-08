@@ -1,6 +1,6 @@
 var app = require('../server.js');
 var passwordHash = require('password-hash');
-var config = require('../config/config.js');
+var config = require('../config.js');
 var request = require('request');
 var moment = require('moment');
 var jwt = require('jwt-simple');
@@ -37,7 +37,10 @@ module.exports = {
         if (profile.error) {
           res.status(500).send({message: profile.error.message});
         } else {
-          res.json({user: profile, token: "null"});
+          console.log('error', err);
+	  console.log('response', response);
+	  console.log('profile', profile);
+          res.json(profile);
         }
       });
     });
