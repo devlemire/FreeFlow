@@ -4,7 +4,7 @@ angular.module('app').service('loginSrvc', function($http) {
   this.login = function(user) {
     return $http({
       method: 'POST',
-      url: connectionString + 'auth/local',
+      url: connectionString + 'auth/login',
       data: user
     })
   }

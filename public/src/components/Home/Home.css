@@ -1,0 +1,41 @@
+#Home-container {
+  width: 100%;
+  min-height: 650px;
+  height: 100vh;
+  background: #11998e;
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+#Home-bottom {
+  position: relative;
+}
+
+#Home-bottom span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#Home-container h1 {
+  margin: 0px;
+  font-size: 45px;
+}
+
+#Home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#Home-top span {
+  font-size: 23px;
+}
+
+#Home-top-link {
+  cursor: pointer;
+}

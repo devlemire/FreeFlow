@@ -27,9 +27,9 @@ app.use('/api/register', require('./routes/register'))
 // app.use('/api/task', require('./routes/task'))
 // app.use('/api/completed', require('./routes/completedTask'))
 
-app.use(express.static(`${__dirname}/public`))
+app.use(express.static(`${__dirname}/public_old`))
 app.all('*', function(req, res, next) {
-  res.sendFile(path.resolve(`${__dirname}/public/index.html`))
+  res.sendFile(path.resolve(`${__dirname}/public_old/index.html`))
 })
 
 app.listen(SERVER_PORT, () => console.log(`Server listening on port ${SERVER_PORT}`))

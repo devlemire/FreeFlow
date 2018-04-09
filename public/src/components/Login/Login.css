@@ -1,0 +1,82 @@
+#Login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  transition: 500ms;
+}
+
+#Login-mask {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: 500ms;
+}
+
+#Login-content {
+  position: relative;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: 3;
+  opacity: 1;
+  transition: 500ms;
+  color: black;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#Login-content-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -15px;
+  right: -12px;
+  font-size: 19px;
+}
+
+#Login-close-btn {
+  cursor: pointer;
+}
+
+#Login-content-bottom {
+  width: 100%;
+}
+
+#Login-content-bottom input {
+  border: none;
+  border-bottom: 2px solid #73e389;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+}
+
+#Login-content-bottom button {
+  color: white;
+  background-color: #73e389;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-top: 10px;
+  font-size: 15px;
+}
